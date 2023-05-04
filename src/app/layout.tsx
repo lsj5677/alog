@@ -29,7 +29,7 @@ export default function RootLayout({ children }: Props) {
     <html lang="en">
       <body className={roboto.className}>
         <Header />
-        <main className="mt-20 flex w-screen justify-center">{children}</main>
+        <main className="mx-auto mt-20 w-screen">{children}</main>
         <Footer />
       </body>
     </html>

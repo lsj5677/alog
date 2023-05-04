@@ -12,6 +12,15 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        upDown: {
+          "0%, 100%": { transform: "translateY(-5px)" },
+          "50%": { transform: "translateY(-2px)" },
+        },
+      },
+      animation: {
+        upDown: "upDown .4s ease-in-out infinite",
+      },
     },
     colors: {
       transparent: "transparent",
@@ -22,7 +31,7 @@ module.exports = {
       mediumGray: "#5e5e5f",
       darkGray: "#383a3f",
       default: "#4ea1d3",
-      point: "#e85a71",
+      point: "#6C49B8",
     },
   },
   plugins: [],

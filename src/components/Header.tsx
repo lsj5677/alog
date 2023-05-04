@@ -18,7 +18,7 @@ export default function Header() {
   }, [isMenuOpen]);
 
   return (
-    <header className="fixed top-0 flex h-20 w-screen py-5 sm:block">
+    <header className="fixed top-0 z-50 flex h-20 w-screen bg-white py-5 sm:block">
       <div className="container m-auto items-center justify-between sm:flex">
         <Link href="/">
           <h1 className="text-4xl font-bold">A_LOG</h1>

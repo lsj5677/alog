@@ -29,7 +29,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
   overflow-y: auto;
 }
 
@@ -39,5 +38,5 @@ main {
 
 .container {
   max-width: 1440px;
-  @apply px-6;
+  @apply mx-auto px-6;
 }

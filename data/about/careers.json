@@ -1,0 +1,88 @@
+[
+  {
+    "id": "1",
+    "role": "Front End Developer",
+    "company": "Elleven",
+    "period": "Dec 2020 - May 2022",
+    "location": "Seoul, South Korea",
+    "desc": [
+      "Optimized and maintained the existing websites of the company.",
+      "Several projects such as e-commerce with Shopify and ReactJS",
+      "Great problem solved and debugging.",
+      "Built a design system."
+    ],
+    "techUsed": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "ReactJS",
+      "NextJS",
+      "Github",
+      "NodeJS"
+    ]
+  },
+  {
+    "id": "2",
+    "role": "Front End Developer",
+    "company": "Focoo",
+    "period": "May 2020 - Aug 2020",
+    "location": "Seoul, South Korea",
+    "desc": ["Built a company website to promote their products and services."],
+    "techUsed": ["HTML", "CSS", "JavaScript", "jQuery"]
+  },
+  {
+    "id": "3",
+    "role": "Front End Developer",
+    "company": "Freelancer",
+    "period": "May 2019 - Jan 2020",
+    "location": "Seoul, South Korea",
+    "desc": [
+      "Built a company website as an adaptive or websites from designed to coding.",
+      "Added an email function by PHP to connect to CS email."
+    ],
+    "techUsed": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "jQuery",
+      "PHP",
+      "Adobe Photoshop",
+      "Adobe XD",
+      "Figma"
+    ]
+  },
+  {
+    "id": "4",
+    "role": "Front End Developer",
+    "company": "Trendmecca",
+    "period": "Nov 2016 - Apr 2018",
+    "location": "Seoul, South Korea",
+    "desc": [
+      "Built websites on Cafe24, e-commerce software such as Shopify.",
+      "Maintained websites under a company.",
+      "Corporated with marketing, design team to improve the quality of brands.",
+      "Built a design system."
+    ],
+    "techUsed": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "jQuery",
+      "Cafe24",
+      "Adobe Photoshop"
+    ]
+  },
+  {
+    "id": " 5",
+    "role": "Web Designer",
+    "company": "Yescalldotcom",
+    "period": "Dec 2020 - May 2022",
+    "location": "Seoul, South Korea",
+    "desc": [
+      "Designed web pages as a responsive.",
+      "Communicated with clients effectively about requests."
+    ],
+    "techUsed": ["HTML", "CSS", "Adobe Photoshop"]
+  }
+]
