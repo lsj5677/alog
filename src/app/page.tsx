@@ -1,5 +1,13 @@
-import Image from "next/image";
+import Summary from "@/components/about/Summary";
+import Hero from "@/components/Hero";
+import FeaturedPosts from "@/components/posts/FeaturedPosts";
 
 export default function HomePage() {
-  return <section>Main</section>;
+  return (
+    <section>
+      <Hero />
+      {/* @ts-expect-error Async Server Component */}
+      <FeaturedPosts />
+    </section>
+  );
 }

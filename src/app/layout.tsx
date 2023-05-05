@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Roboto } from "next/font/google";
-import { Nanum_Gothic } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -14,7 +14,7 @@ const roboto = Roboto({
   subsets: ["latin"],
 });
 
-const gothic = Nanum_Gothic({
+const sans = Open_Sans({
   weight: ["400", "700"],
   subsets: ["latin"],
 });
@@ -26,8 +26,8 @@ export const metadata = {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="en">
-      <body className={roboto.className}>
+    <html lang="en" className={sans.className}>
+      <body className="tracking-tight">
         <Header />
         <main className="mx-auto mt-20 w-screen">{children}</main>
         <Footer />

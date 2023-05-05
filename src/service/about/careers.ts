@@ -1,5 +1,5 @@
 import path from "path";
-import { promises as fs } from "fs";
+import { readFile } from "fs/promises";
 
 export type CareerProps = {
   id: string;
@@ -13,7 +13,6 @@ export type CareerProps = {
 
 export async function getCareers(): Promise<CareerProps[]> {
   const filePath = path.join(process.cwd(), "data/about", "careers.json");
-  const data = await fs.readFile(filePath, "utf-8");
-
-  return JSON.parse(data);
+  return readFile(filePath, "utf-8") //
+    .then<CareerProps[]>(JSON.parse);
 }
