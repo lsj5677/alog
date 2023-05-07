@@ -39,5 +39,5 @@ module.exports = {
       pink: colors.fuchsia,
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
