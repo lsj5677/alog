@@ -1,6 +1,7 @@
 import Summary from "@/components/about/Summary";
 import Hero from "@/components/Hero";
 import FeaturedPosts from "@/components/posts/FeaturedPosts";
+import CarouselPosts from "@/components/posts/CarouselPosts";
 
 export default function HomePage() {
   return (
@@ -8,6 +9,8 @@ export default function HomePage() {
       <Hero />
       {/* @ts-expect-error Async Server Component */}
       <FeaturedPosts />
+      {/* @ts-expect-error Async Server Component */}
+      <CarouselPosts />
     </section>
   );
 }

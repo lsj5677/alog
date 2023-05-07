@@ -12,7 +12,7 @@ export type CareerProps = {
 };
 
 export async function getCareers(): Promise<CareerProps[]> {
-  const filePath = path.join(process.cwd(), "data/about", "careers.json");
+  const filePath = path.join(process.cwd(), "data", "about", "careers.json");
   return readFile(filePath, "utf-8") //
     .then<CareerProps[]>(JSON.parse);
 }

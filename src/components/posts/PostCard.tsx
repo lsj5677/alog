@@ -9,7 +9,7 @@ export default function PostCard({
 }: Props) {
   return (
     <Link href={`/posts/${path}`}>
-      <article className="overflow-hidden rounded-md shadow-lg transition-all hover:-translate-y-5 hover:transition-all">
+      <article className="overflow-hidden rounded-md shadow-lg transition-all hover:-translate-y-3 hover:bg-yellow-50 hover:transition-all">
         <Image
           src={`/images/posts/${path}.png`}
           alt={title}
@@ -17,7 +17,7 @@ export default function PostCard({
           height={200}
         />
         <div className="flex flex-col items-center p-5">
-          <div className="flex w-full items-center justify-between">
+          <div className="flex w-full items-center justify-between border-b border-lightGray pb-3">
             <time className="text-sm text-mediumGray opacity-50">
               {date.toString()}
             </time>

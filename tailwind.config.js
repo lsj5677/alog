@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -32,6 +33,10 @@ module.exports = {
       darkGray: "#383a3f",
       default: "#4ea1d3",
       point: "#6C49B8",
+      green: colors.emerald,
+      purple: colors.violet,
+      yellow: colors.amber,
+      pink: colors.fuchsia,
     },
   },
   plugins: [],
