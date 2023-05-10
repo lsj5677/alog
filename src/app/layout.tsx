@@ -20,8 +20,14 @@ const sans = Open_Sans({
 });
 
 export const metadata = {
-  title: "A_LOG",
-  description: "This is Agnes Blog and you can see her daily life.",
+  title: {
+    default: "A_LOG",
+    template: "A_LOG | %s",
+  },
+  description: "This is Agnes Blog and you can see my daily life.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }: Props) {

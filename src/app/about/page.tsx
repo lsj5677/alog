@@ -1,4 +1,10 @@
 import About from "@/components/about/About";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Agnes",
+  description: "Introduce my profile",
+};
 
 export default function AboutPage() {
   return (

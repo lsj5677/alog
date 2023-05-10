@@ -1,5 +1,6 @@
 "use client";
 
+import { sendContactEmail } from "@/service/contact/contact";
 import { FormEvent } from "react";
 import { ChangeEvent, useState } from "react";
 import StateBanner, { StateBannerData } from "./StateBanner";
@@ -9,12 +10,15 @@ type FormProps = {
   subject: string;
   message: string;
 };
+
+const DEFAULT_DATA = {
+  from: "",
+  subject: "",
+  message: "",
+};
+
 export default function ContactForm() {
-  const [form, setForm] = useState<FormProps>({
-    from: "",
-    subject: "",
-    message: "",
-  });
+  const [form, setForm] = useState<FormProps>(DEFAULT_DATA);
 
   const [stateBanner, setStateBanner] = useState<StateBannerData | null>(null);
 
@@ -25,14 +29,27 @@ export default function ContactForm() {
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(form);
-    setStateBanner({
-      message: "Your email has been successfully sent",
-      state: "success",
-    });
-    setTimeout(() => {
-      setStateBanner(null);
-    }, 3000);
+    sendContactEmail(form)
+      .then(() => {
+        console.log("11>>>");
+        setStateBanner({
+          message: "Your email has been successfully sent",
+          state: "success",
+        });
+        setForm(DEFAULT_DATA);
+      })
+      .catch(() => {
+        console.log("22>>>");
+        setStateBanner({
+          message: "Your email was not sent",
+          state: "error",
+        });
+      })
+      .finally(() => {
+        setTimeout(() => {
+          setStateBanner(null);
+        }, 3000);
+      });
   };
 
   return (
