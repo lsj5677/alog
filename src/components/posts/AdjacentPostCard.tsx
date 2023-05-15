@@ -8,20 +8,31 @@ type Props = {
   type: "prev" | "next";
 };
 
-const HOVER_STYLE = "group-hover:text-point";
-
 export default function AdjacentPostCard({
   post: { path, title },
   type,
 }: Props) {
   return (
     <Link href={`/posts/${path}`} className="group">
-      <div className="box-border flex items-center gap-3 text-mediumGray group-hover:border-b group-hover:border-point">
-        {type === "prev" && <HiArrowLeft className={HOVER_STYLE} />}
-        <div>
-          <h4 className={HOVER_STYLE}>{title}</h4>
+      <div
+        className={`box-border flex items-center gap-3 rounded-md bg-lightGray bg-opacity-50 p-3 text-mediumGray hover:bg-opacity-100 sm:w-[30vw] ${
+          type === "next" && "justify-end"
+        }`}
+      >
+        {type === "prev" && (
+          <HiArrowLeft className="rounded-full border text-2xl" />
+        )}
+        <div className="px-3 text-sm">
+          {type === "prev" ? (
+            <span>Previous Post</span>
+          ) : (
+            <span>Next Post</span>
+          )}
+          <h4 className="text-lg font-semibold">{title}</h4>
         </div>
-        {type === "next" && <HiArrowRight className={HOVER_STYLE} />}
+        {type === "next" && (
+          <HiArrowRight className="rounded-full border text-2xl" />
+        )}
       </div>
     </Link>
   );

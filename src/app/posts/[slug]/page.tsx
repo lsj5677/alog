@@ -1,6 +1,7 @@
 import AdjacentPostCard from "@/components/posts/AdjacentPostCard";
 import PostContent from "@/components/posts/PostContent";
-import { getPost } from "@/service/posts/posts";
+import { getAllPosts, getPost } from "@/service/posts/posts";
+import { Metadata } from "next";
 
 export const revalidate = 3;
 
@@ -10,15 +11,20 @@ type Props = {
   };
 };
 
-export function generatedMetadata({ params }: Props) {
+export async function generateMetadata({
+  params: { slug },
+}: Props): Promise<Metadata> {
+  const { title, description } = await getPost(slug);
+
   return {
-    title: `A_LOG ${params.slug}`,
+    title,
+    description,
   };
 }
 
 export default async function PostPage({ params: { slug } }: Props) {
   const post = await getPost(slug);
-  const { title, description, date, path, content, prev, next } = post;
+  const { path, prev, next } = post;
 
   return (
     <article>
@@ -35,4 +41,12 @@ export default async function PostPage({ params: { slug } }: Props) {
       </div>
     </article>
   );
+}
+
+export async function generateStaticParams() {
+  const posts = await getAllPosts();
+
+  return posts.map((post) => ({
+    slug: post.path,
+  }));
 }
